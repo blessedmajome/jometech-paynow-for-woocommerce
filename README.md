@@ -37,7 +37,7 @@ See `changelog.txt` for the full list.
 ## Install
 
 1. If another Paynow plugin for WooCommerce is installed, deactivate it first. Your Paynow settings are kept: this build reads the same settings.
-2. Download this repository as a zip, then in WordPress go to Plugins > Add New > Upload Plugin and upload it.
+2. Download this repository as a zip (Code > Download ZIP on https://github.com/blessedmajome/jometech-paynow-for-woocommerce), then in WordPress go to Plugins > Add New > Upload Plugin and upload it.
 3. Activate the plugin.
 4. Check WooCommerce > Settings > Payments > Paynow and place one small test order.
 
