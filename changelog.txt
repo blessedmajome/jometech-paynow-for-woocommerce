@@ -1,0 +1,46 @@
+*** Paynow Changelog***
+
+2026-11-24 - version 1.3.5.2 (JomeTech Africa build; not an official Paynow release)
+* Tested end to end on a WordPress + WooCommerce test shop (block and classic checkout, old and new order storage).
+* No PHP warning when Paynow answers with an error or maintenance page instead of payment data.
+* Classic checkout: no PHP warnings when a transaction is started (Paynow's first reply has no reference or amount yet).
+* "Check payment with Paynow" is safe if the order no longer exists.
+
+2026-11-24 - version 1.3.5.1 (JomeTech Africa build; not an official Paynow release)
+* Orders are now confirmed with Paynow directly: when the customer returns to the order received page,
+  2 and 10 minutes after checkout, and hourly for unpaid Paynow orders of the last 5 days. An order is
+  completed even if Paynow's notification (result URL) never reaches the site.
+* Added "Check payment with Paynow" to the order actions in the admin.
+* One shared, error-safe status check: no more fatal error when Paynow cannot be reached, the same
+  integration key is used at checkout and at confirmation, and the paid amount is compared with the order total.
+* The status endpoint (wp-json/paynow/v1/order/ID) now requires the order key, so it no longer reveals
+  another customer's order link.
+* Debug details are written to WooCommerce > Status > Logs instead of web-readable files.
+
+2025-03-07 - version 1.3.4
+* Remove conditional support of WooCommerce none  blocks checkout( checkout shortcode)
+* Fix Enter valid return url paynow error. 
+
+2023-10-09 - version 1.3.2
+* Added support for express checkout with mobile wallets like Ecocash, One Money and innbucks
+
+2023-09-30 - version 1.3.1
+* fixed Code formating to match  woocommerce and Wordpress standards
+
+2020-05-14 - version 1.3.0
+* Added multi currency support
+
+2020-05-14 - version 1.2.2
+* fixed bug where a cancelled still redirected the customer to the order received page. it now redirects them to the order cancelled page.
+
+2020-05-13 - version 1.2.1
+* fixed plugin not appearing on multisite if not network activated
+
+2019-03-28 - version 1.2.0
+* restructured the plugin to align it with woocommerce standards and OOP
+* removed unused code
+* removed all curl requests and replaced with wp_remote
+* Added multisite support
+
+2014-07-02 - version 1.0
+*Inital Release
